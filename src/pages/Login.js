@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);
   const [formData, setFormData] = useState({
+    name:"",
     email: "",
     password: "",
     confirmPassword: "",
@@ -27,6 +28,14 @@ const Login = () => {
         <h2 className="text-center">{isRegistering ? "Register" : "Login"}</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
+            <label className="form-label">name</label>
+            <input type="text"
+            className="form-control"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            />
             <label className="form-label">Email</label>
             <input
               type="email"
