@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Weather from "./components/Weather";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -14,9 +15,10 @@ const App = () => {
       <Navbar />
       <div className="container mt-4">
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/Weather"element={<Weather />}/>
+          <Route path="/Login"element={<Login />}/>
         </Routes>
       </div>
       <Footer />
